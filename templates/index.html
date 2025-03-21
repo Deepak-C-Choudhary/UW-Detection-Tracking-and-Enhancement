@@ -1,0 +1,83 @@
+<!-- 
+ #_______________________________________working fine___________________________# -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UW-dash</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="logo">UW-dash</h1>
+            <nav>
+                <div class="nav-item active">
+                    <span>Detection</span>
+                    <div class="sub-item" id="detectionMenu"><b>Yolov12</b></div>
+                </div>
+                <div class="nav-item">
+                    <span>Tracking</span>
+                    <div class="sub-item" id="trackingMenu"><b>Deep Sort</b></div>
+                </div>
+                <div class="nav-item">
+                    <span>Enhancement</span>
+                    <div class="sub-item" id="enhancementMenu"><b>Clahe</b></div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="ip-container">
+                    <input type="text" id="ipAddress" placeholder="Enter IP address here...">
+                    <button class="refresh-btn" id="refreshIP">↻</button>
+                </div>
+                <div class="stream-controls">
+                    <button class="start-btn" id="startStream">Start Streaming</button>
+                    <button class="stop-btn" id="stopStream">Stop Streaming</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="upload-btn" id="uploadImages">Upload Images</button>
+                <button class="upload-btn" id="uploadVideos">Upload Videos</button>
+                <button class="upload-btn" id="startRecording">Start Recording</button>
+            </div>
+
+            <div class="preview-section">
+                <h2>Preview</h2>
+                <div class="preview-content" id="previewArea"></div>
+                <button class="process-btn" id="processButton">Process</button>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Object Detection</h3>
+                    <div class="result-content" id="detectionOutput">
+                        <p>No results available</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <h3>Tracking Output</h3>
+                    <div class="result-content" id="trackingOutput">
+                        <p>No tracking results yet</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <h3>Enhancement Output</h3>
+                    <div class="result-content" id="enhancementOutput">
+                        <p>No enhancement results yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
