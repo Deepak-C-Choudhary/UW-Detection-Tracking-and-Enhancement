@@ -1,0 +1,8 @@
+Flask
+opencv-python
+numpy
+ultralytics
+deep_sort_realtime
+werkzeug
+requests
+gunicorn
